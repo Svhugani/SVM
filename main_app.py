@@ -1,5 +1,4 @@
 import streamlit as st
-from sklearn import datasets
 from sklearn.preprocessing import StandardScaler
 import svm
 import datasets

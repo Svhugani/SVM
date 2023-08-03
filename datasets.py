@@ -1,4 +1,3 @@
-from sklearn.utils import shuffle
 from sklearn.datasets import make_blobs, make_circles
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
