@@ -1,5 +1,5 @@
 import streamlit as st
-from sklearn.preprocessing import StandardScaler
+import sklearn
 import svm
 import datasets
 import plots
@@ -38,7 +38,7 @@ def get_dataset(data_label, scale=True, random_seed=0):
             random_seed=random_seed
         )
     if scale:
-        scaler = StandardScaler()
+        scaler = sklearn.preprocessing.StandardScaler()
         X_train = scaler.fit_transform(X_train)
         X_test = scaler.transform(X_test)
 
