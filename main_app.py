@@ -6,7 +6,7 @@ import random
 import sklearn
 
 RANDOM_SEED = 147
-LEARNING_RATE_VALUES = [1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6, 1e-7, 1e-8]
+LR_VALS = [1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6, 1e-7, 1e-8]
 X_train = None
 X_test = None
 y_train = None
@@ -105,8 +105,8 @@ st.sidebar.divider()
 st.sidebar.write("SVM OPTIMIZER SETTINGS")
 num_of_iterations = st.sidebar.slider(label="Number of iterations", min_value=5, max_value=2000, value=200)
 margin_penalty = st.sidebar.slider(label="Margin penalty", min_value=0., max_value=10., value=1.0)
-learning_rate = st.sidebar.select_slider(label="Learning rate", options=LEARNING_RATE_VALUES)
-#st.sidebar.button(label="PERFORM CLASSIFICATION", on_click=classify_svm())
+learning_rate = st.sidebar.select_slider(label="Learning rate", options=LR_VALS, value=LR_VALS[4])
+
 classify_svm()
 
 st.write(f"Data type: **{selected_data.upper()}**")
