@@ -1,9 +1,9 @@
 import streamlit as st
-import sklearn
 import svm
 import datasets
 import plots
 import random
+import sklearn
 
 RANDOM_SEED = 147
 LEARNING_RATE_VALUES = [1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6, 1e-7, 1e-8]
